@@ -23,7 +23,7 @@ const ImageTextExtract = () => {
 
     try {
       const apiKey = "YOUR_GOOGLE_CLOUD_VISION_API_KEY"; // Replace with your API key
-      const url = `https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCCSTPYF3rH8z-02QaJjfih--9IXGuoL-Y`;
+      const url = `https://vision.googleapis.com/v1/images:annotate?key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
 
       const response = await axios.post(url, {
         requests: [
